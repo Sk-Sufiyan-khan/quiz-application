@@ -89,12 +89,3 @@ var timer = setInterval(() => {
 
 // score 
 
-function calculateScore() {
-    let score = 0;
-
-    if (document.querySelector('input[name="answer1"]:checked')?.value === "5") score++;
-    if (document.querySelector('input[name="answer2"]:checked')?.value === "5") score++;
-    if (document.querySelector('input[name="answer3"]:checked')?.value === "5") score++;
-
-    alert(`Your score: ${score}/3`);
-  }
