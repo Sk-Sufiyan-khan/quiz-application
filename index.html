@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Aplication</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css">
+</head>
+<style>
+  .quiz-box{
+    width: 600px;
+    margin: 50px auto;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 0 15px rgb(93, 93, 93);
+}
+
+.question {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+
+ label{
+    cursor: pointer;
+  }
+  
+ input{
+    cursor: pointer;
+  }
+
+  h4{
+    font-size: 15px;
+  }
+
+</style>
+
+<body>
+  <div class="quiz-box">
+    <div class="d-flex justify-content-between align-items-center">
+      <div id="ques" class="question"></div>
+      <h4>Time Left: <span id="timer"> 59</span></h4>
+    </div>
+    <div>
+      <input type="radio" name="answer1" id="option1" onclick="enableNext()">
+      <label for="option1" id="opt1"></label>
+    </div>
+    <div>
+      <input type="radio" name="answer2" id="option2" onclick="enableNext()">
+      <label for="option2" id="opt2"></label>
+    </div>
+    <div>
+      <input type="radio" name="answer3" id="option3" onclick="enableNext()">
+      <label for="option3" id="opt3"></label>
+    </div>
+    <div class="text-end mt-4">
+      <button class="btn btn-primary" id="btn" onclick="next()">Next</button>
+    </div>
+  </div>
+
+  <div id="calculate" onclick="calculateScore()"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
